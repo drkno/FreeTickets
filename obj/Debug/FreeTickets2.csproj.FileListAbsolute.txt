@@ -1,6 +1,5 @@
 c:\users\matthew\documents\visual studio 2015\Projects\FreeTickets2\bin\Debug\FreeTickets2.exe.config
 c:\users\matthew\documents\visual studio 2015\Projects\FreeTickets2\bin\Debug\FreeTickets2.exe
 c:\users\matthew\documents\visual studio 2015\Projects\FreeTickets2\bin\Debug\FreeTickets2.pdb
-c:\users\matthew\documents\visual studio 2015\Projects\FreeTickets2\obj\Debug\FreeTickets2.csprojResolveAssemblyReference.cache
 c:\users\matthew\documents\visual studio 2015\Projects\FreeTickets2\obj\Debug\FreeTickets2.exe
 c:\users\matthew\documents\visual studio 2015\Projects\FreeTickets2\obj\Debug\FreeTickets2.pdb
